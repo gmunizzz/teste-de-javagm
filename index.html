@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div>
+        <h1><a href="/">/gabriel muniz.</a></h1>
+      </div>
+      <div>
+        <a class="button" data-modal="abrir">Cadastrar</a>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="fechar" class="fechar">X</button>
+      <form action="">
+        <label for="nome">Nome</label>
+        <input type="text" for="nome" id="nome" required>
+        <label for="email">Email</label>
+        <input type="email" for="email" id="email" required>
+        <label for="telefone">Telefone</label>
+        <input type="tel" for="telefone" id="telefone" maxlength="15" onkeyup="handlePhone(event)" required>
+        <label for="cpf">CPF</label>
+        <input type="text" for="cpf" id="cpf" oninput="handleCPF(event)" maxlength="14" required>
+          <label for="senha">Senha</label>
+          <input type="password" for="senha" id="senha" required>
+          <i class="fa-solid fa-eye" onclick="togglePasswordVisibility()" id="eye-icon"></i>
+          <button type="submit" onclick="local(event)">Entrar</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
